@@ -14,17 +14,12 @@ header #logueo{
     height: auto;
     margin: 2% 2%;
 }
-#acerca-de{
-    max-width: 90%;
-    margin: 5%;
-    min-height: 200px;
-}
-#acerca_de{
+.contenedor{
     text-align: center;
-    width: 90%;
     margin:0 5%;
     border-bottom: solid 5px #0d6efd;
-    padding-bottom: 2rem;
+    padding: 0 1rem;
+    position: relative;
 }
 .perfil img{
     border: whitesmoke solid 5px;
@@ -37,6 +32,7 @@ header #logueo{
     position: relative;
     float: left;
 }
+
 @media screen and (orientation: portrait) {
     .perfil{
         top:-50px;
