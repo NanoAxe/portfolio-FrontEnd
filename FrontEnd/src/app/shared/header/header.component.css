@@ -1,0 +1,39 @@
+.Banner{
+    border-radius: 10px;
+    max-width: 96%;
+    height: auto;
+    margin: 2% 2%;
+}
+.contenedor{
+    text-align: center;
+    margin:0 5%;
+    border-bottom: solid 5px #0d6efd;
+    padding: 0 1rem;
+    position: relative;
+}
+.perfil img{
+    border: whitesmoke solid 5px;
+    border-radius: 100% !important;
+    height: 200px;
+}
+.perfil{
+    top: -150px;
+    width: 30%;
+    position: relative;
+    float: left;
+}
+
+@media screen and (orientation: portrait) {
+    .perfil{
+        top:-50px;
+        width: 90%;
+        text-align: center;
+        margin:0 5%;
+    }
+    .perfil img{
+        border: whitesmoke solid 5px;
+        border-radius: 100% !important;
+        width: 30%;
+        height: auto;
+    }
+}
