@@ -1,26 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UnidadesComponent } from './unidades.component';
-import { ExperienciaComponent } from './experiencia/experiencia.component';
 import { EducacionComponent } from './educacion/educacion.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ProjetsComponent } from './projets/projets.component';
+import { ExperienciaComponent } from './experiencia/experiencia.component';
+import { ProyectosComponent } from './proyectos/proyectos.component';
+import { HabilidadesComponent } from './habilidades/habilidades.component';
 
 
 
 @NgModule({
   declarations: [
-    UnidadesComponent,
-    ExperienciaComponent,
     EducacionComponent,
-    SkillsComponent,
-    ProjetsComponent
+    ExperienciaComponent,
+    ProyectosComponent,
+    HabilidadesComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    UnidadesComponent
+    EducacionComponent,
+    ExperienciaComponent,
+    ProyectosComponent,
+    HabilidadesComponent
   ]
 })
 export class UnidadesModule { }

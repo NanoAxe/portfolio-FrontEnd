@@ -1,0 +1,20 @@
+<form [formGroup]="form" class="container text-center">
+    <h2> Ingrese o actualice su informacion</h2>
+    <div class="container justify-content-center row">
+            <div class="card text-bg-primary" style="width: 18rem; padding: 0;">
+                <div class="card-body">
+                    <label class="col-10" for="nombre">Habilidad / Tecnologia </label>
+                    <input type="text" id="nombre" formControlName="descripcion">
+                    <label class="col-6" for="nivel">Nivel</label>
+                        <select formControlName="nivel" id="nivel" class="x col-md-4 form-select" aria-label="Default select example" >
+                            <option >Bajo</option>
+                            <option >Medio</option>
+                            <option >Alto</option>
+                        </select>
+                    <p></p>
+                    <button type="button" class="margen btn btn-success btn-sm" (click)="guardar()">Guardar</button>
+                    <button type="button" class="margen btn btn-warning btn-sm" (click)="irA()">Cancelar</button>
+                </div>
+            </div>
+    </div>
+</form>
