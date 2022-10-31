@@ -1,0 +1,23 @@
+<div class="container text-center">
+    <h2>Experiencia <button type="button" class="btn btn-primary btn-sm" (click)="irA()">+</button></h2>
+    <div class="container justify-content-center row">
+    <div *ngFor="let item of lista" class="col-xl-6 col-lg-6 col-md-6">
+        <div class="card text-bg-primary mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../../../assets/imagenes/{{item.logo_org}}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.lugar}} - {{item.puesto}}</h5>
+                        <p class="card-text">{{item.descripcion}}</p>
+                        <p class="card-text"><small>{{item.periodo_i}} - {{item.periodo_f}}</small></p>
+                        <button type="button" class="margen btn btn-success btn-sm" (click)="enviarA(item)">Editar</button>
+                        <button type="button" class="margen btn btn-warning btn-sm" (click)="eliminar(item.id_X)">Borrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
