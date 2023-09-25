@@ -1,0 +1,30 @@
+<form [formGroup]="form" class="container text-center">
+    <h2>Ingrese o actualice su informacion</h2>
+    <div class="container justify-content-center row">
+        <div class="col-xl-9 col-lg-9 col-md-8">
+            <div class="card text-bg-primary mb-3" style="max-width: 800px;">
+                <div class="row g-0">
+                    <div class="col-md-4 col-sm-12">
+                        <img src="../../../assets/imagenes/experiencia.png" class="img-fluid rounded-start" alt="...">
+                        <label class="col-12" for="periodoI">Periodo</label>
+                        <input class="col-3" type="number" id="periodoI" formControlName="periodo_i">
+                        <input class="col-3" type="number" id="periodoF" formControlName="periodo_f">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <label class="col-6" for="organizacion">Organizacion </label>
+                            <input type="text" id="organizacion" formControlName="organizacion">
+                            <label class="col-6" for="puesto">Puesto </label>
+                            <input type="text" id="puesto" formControlName="puesto">
+                            <label for="descripcion">Descripcion de sus actividades</label>
+                            <textarea class="col-12" type="text" id="descripcion"
+                                formControlName="descripcion"></textarea>
+                            <button type="button" class="btn btn-success btn-sm" (click)="guardar()">Guardar</button>
+                            <button type="button" class="btn btn-danger btn-sm" (click)="irA()">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
