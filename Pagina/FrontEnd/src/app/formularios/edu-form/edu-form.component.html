@@ -1,0 +1,22 @@
+<form [formGroup]="form" class="container text-center">
+    <h2> Ingrese o actualice su informacion</h2>
+    <div class="container justify-content-center row">
+        <div class="margen col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <div class="card text-bg-primary" style="width: 18rem; margin: 1rem;">
+                <img src="../../../assets/imagenes/educacion.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <label class="col-6" for="institucion">Institucion </label>
+                    <input type="text" id="institucion" formControlName="institucion">
+                    <label class="col-6" for="titulo">Titulo </label>
+                    <input type="text" id="titulo" formControlName="titulo">
+                    <label class="col-12" for="periodoI">Periodo</label>
+                    <input class="col-3" type="number" id="periodoI" formControlName="periodo_i">
+                    <input class="col-3" type="number" id="periodoF" formControlName="periodo_f">
+                    <br>
+                    <button type="button" class="btn btn-success btn-sm" (click)="guardar()">Guardar</button>
+                    <button type="button" class="btn btn-danger btn-sm" (click)="irA()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
