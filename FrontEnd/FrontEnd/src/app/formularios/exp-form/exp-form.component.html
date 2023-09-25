@@ -1,0 +1,33 @@
+<form [formGroup]="form" class="tarjeta">
+    <h3>Experiencia</h3>
+    <div class="element">
+        <label for="logo">Logo de la empresa</label>
+        <br>
+        <input type="file" id="logo">
+    </div>
+    <div class="element">
+        <label for="lugar">Lugar de trabajo</label>
+        <br>
+        <input type="text" id="lugar" autocomplete="off" formControlName="lugar">
+    </div>
+    <div class="element">
+        <label for="puesto">Puesto de Trabajo</label>
+        <br>
+        <input type="text" id="puesto" autocomplete="off" formControlName="puesto">
+    </div>
+    <div class="element">
+        <label for="descripcion">Descripcion de actividades</label>
+        <br>
+        <textarea autocomplete="off" placeholder="Descripcion de actividades" maxlength="255"
+            formControlName="descripcion"></textarea>
+    </div>
+    <div class="element">
+        <label for="PI">Periodo</label>
+        <div class="double-element">
+            <input id="PI" type="number" max="2023" min="1920" formControlName="PI">
+            <span> a </span>
+            <input type="number" max="2023" min="1920" formControlName="PF">
+        </div>
+    </div>
+    <button type="button" (click)="preparar()">Guardar</button>
+</form>

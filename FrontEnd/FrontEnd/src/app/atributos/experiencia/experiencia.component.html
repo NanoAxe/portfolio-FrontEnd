@@ -1,0 +1,51 @@
+<div class="cabecera">
+  <h3> Experiencia </h3>
+  <button (click)="openForm()" *ngIf="this.bLog">+</button>
+</div>
+<!-- <div class="container">
+  <div class="box" *ngFor="let item of listaPrueba">
+    <div class="logo">
+      <img src="../../../assets/Imagenes/experience.png" class="img-fluid" alt="Icono-institucion">
+    </div>
+    <div class="datos">
+      <span class="lugar">Libreria San Pablo </span>
+      <span class="cargo">Atencion al publico</span>
+      <span class="periodo">2023-2023</span>
+    </div>
+    <div class="actividades">
+      <span class="cargo"> Actividades</span>
+      <p> supercalifragilistico espialidoso dflafadsfil dasfdsa ifdnsao f daoifnoiadsoif dsaoi foia foiads oifdaoi
+        faoifn aoiadns foiafndaoifndi fnoiads foidaoif</p>
+      <div *ngIf="this.bLog">
+        <button>Editar</button>
+        <button>Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <div class="box" *ngFor="let item of expLista">
+    <div class="logo">
+      <img src="{{item.dirLogo}}" class="img-fluid" alt="Icono-institucion">
+    </div>
+    <div class="datos">
+      <span class="lugar">{{item.lugar}}</span>
+      <span class="cargo">{{item.puesto}}</span>
+      <span class="periodo">{{item.periodoI}} + {{item.periodoF}}</span>
+    </div>
+    <div class="actividades">
+      <span class="cargo"> Actividades</span>
+      <p>{{item.descripcion}}</p>
+      <div *ngIf="this.bLog">
+        <button (click)="openEditForm(item)">Editar</button>
+        <button (click)="deleteItem(item.idExp!)">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="this.bForms" class="ventana">
+  <button class="cerrar" (click)="cerrar()">X</button>
+  <div class="formulario">
+    <app-exp-form [selectedExp]="selectedExp"></app-exp-form>
+  </div>
+</div>

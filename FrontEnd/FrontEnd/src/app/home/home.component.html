@@ -1,0 +1,29 @@
+<header>
+    <app-perfil></app-perfil>
+</header>
+<main>
+    <section>
+        <app-educacion></app-educacion>
+    </section>
+    <section>
+        <app-experiencia></app-experiencia>
+    </section>
+    <section>
+        <app-habilidad></app-habilidad>
+    </section>
+    <section>
+        <app-proyectos></app-proyectos>
+    </section>
+</main>
+<div *ngIf="this.bandera" class="ventana">
+    <button class="cerrar" (click)="cerrar()">X</button>
+    <div class="formulario">
+        <app-logueo></app-logueo>
+    </div>
+</div>
+<!-- <div *ngIf="this.bandera" class="ventana">
+    <button class="cerrar" (click)="cerrar()">X</button>
+    <div class="formulario">
+        <app-logueo></app-logueo>
+    </div>
+</div> -->

@@ -1,0 +1,30 @@
+<form [formGroup]="form" class="tarjeta">
+    <h3>Perfil</h3>
+    <div class="element">
+        <label for="banner">Banner</label>
+        <br>
+        <input type="file" (change)="capturarBanner($event)" id="banner">
+    </div>
+    <div class="element">
+        <label for="perfil">Foto de Perfil</label>
+        <br>
+        <input type="file" (change)="capturarPerfil($event)" id="perfil">
+    </div>
+    <div class="element">
+        <label for="nombre">Nombre</label>
+        <br>
+        <input type="text" id="nombre" autocomplete="off" formControlName="nombre">
+    </div>
+    <div class="element">
+        <label for="titulo">Titulo</label>
+        <br>
+        <input type="text" id="titulo" autocomplete="off" formControlName="titulo">
+    </div>
+    <div class="element">
+        <label for="aboutMe">Acerca de mi</label>
+        <br>
+        <textarea autocomplete="off" placeholder="Descripcion de actividades" maxlength="255"
+            formControlName="aboutMe"></textarea>
+    </div>
+    <button (click)="update()">Guardar</button>
+</form>

@@ -1,0 +1,27 @@
+<form [formGroup]="form" class="tarjeta">
+    <h3>Educacion</h3>
+    <div class="element">
+        <label for="logo">Logo de la institucion</label>
+        <br>
+        <input type="file" (change)="capturar($event)" id="logo">
+    </div>
+    <div class="element">
+        <label for="insti">Institucion</label>
+        <br>
+        <input type="text" id="insti" autocomplete="off" formControlName="institucion">
+    </div>
+    <div class="element">
+        <label for="titulo">Titulo</label>
+        <br>
+        <input type="text" id="titulo" autocomplete="off" formControlName="titulo">
+    </div>
+    <div class="element">
+        <label for="PI">Periodo</label>
+        <div class="double-element">
+            <input id="PI" type="number" max="2023" min="1920" formControlName="PI">
+            <span> a </span>
+            <input type="number" max="2023" min="1920" formControlName="PF">
+        </div>
+    </div>
+    <button type="button" class="" (click)="preparar()">Guardar</button>
+</form>

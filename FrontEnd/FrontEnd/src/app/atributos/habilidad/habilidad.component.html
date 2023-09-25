@@ -1,0 +1,51 @@
+<div class="cabecera">
+    <h2 style="color: whitesmoke;"> Habilidades </h2>
+    <button (click)="openForm()" *ngIf="this.bLog">+</button>
+</div>
+<!-- <div class="skill-container">
+    <div class="habilidad" *ngFor="let item of end">
+        <div class="circular-progress" [class]="item" #circularProgress>
+            <span class="progress-value">
+                {{item}}
+            </span>
+        </div>
+        <span class="text">Html</span>
+        <div class="options" *ngIf="this.bLog">
+            <button>Editar</button>
+            <button>Eliminar</button>
+        </div>
+    </div>
+</div> -->
+<div class="skill-container">
+    <div class="habilidad" *ngFor="let item of skillList">
+        <div class="circular-progress" [class]="item.nivel">
+            <span class="progress-value">
+                {{item.nivel}}
+            </span>
+        </div>
+        <span class="text">{{item.descripcion}}</span>
+        <div class="options" *ngIf="this.bLog">
+            <button (click)="openEditForm(item)">Editar</button>
+            <button (click)="deleteItem(item.id_H!)">Eliminar</button>
+        </div>
+    </div>
+</div>
+<div *ngIf="this.bForms" class="ventana">
+    <button class="cerrar" (click)="cerrar()">X</button>
+    <div class="formulario">
+        <app-skill-form [selectedSkill]="selectedSkill"></app-skill-form>
+    </div>
+</div>
+<!--    //Esto hace q cada classe use el valor extraido de la lista :D 
+    <div class="skill-container" >
+    <div class="skill" *ngFor="let item of values">
+        <div class="progress-bar ">
+            <span class="{{this.item}}">{{this.item}}</span>
+        </div>
+    </div>
+    <div class="skill"></div>
+    <div class="skill">Xd</div>
+    <div class="skill">XD</div>
+    <div class="skill">XD</div>
+</div>
+ -->

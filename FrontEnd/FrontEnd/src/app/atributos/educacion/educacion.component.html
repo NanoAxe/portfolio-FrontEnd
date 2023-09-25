@@ -1,0 +1,42 @@
+<div class="cabecera">
+  <h3> Educacion </h3>
+  <button (click)="openForm()" *ngIf="this.bLog">+</button>
+</div>
+<!-- <div class="container">
+  <div class="box" *ngFor="let item of listaPrueba">
+    <div class="logo">
+      <img src="../../../assets/Imagenes/education.png" class="img-fluid" alt="Icono-institucion">
+    </div>
+    <div class="informacion">
+      <span class="insti">Instituto de Educacion Superior "Nuevo Horizonte"</span>
+      <span class="titulo">Ingles basico/intermedio</span>
+      <span class="periodo">2019 - 2019</span>
+      <div class="options" *ngIf="this.bLog">
+        <button>Editar</button>
+        <button>Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <div class="box" *ngFor="let item of eduList">
+    <div class="logo">
+      <img src="{{item.dirIcono}}" class="img-fluid" alt="Icono-institucion">
+    </div>
+    <div class="informacion">
+      <span class="insti">{{item.institucion}}</span>
+      <span class="titulo">{{item.titulo}}</span>
+      <span class="periodo">{{item.inicio}} - {{item.fin}}</span>
+      <div class="options" *ngIf="this.bLog">
+        <button (click)="openEditForm(item)">Editar</button>
+        <button (click)="deleteItem(item.idEdu!)">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="this.bForms" class="ventana">
+  <button class="cerrar" (click)="cerrar()">X</button>
+  <div class="formulario">
+    <app-educacion-form [selectedEd]="selectedEd"></app-educacion-form>
+  </div>
+</div>

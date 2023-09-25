@@ -1,0 +1,20 @@
+<form [formGroup]="form" class="tarjeta">
+        <h3>Tecnologia</h3>
+        <div class="element">
+            <label for="tecnologia">Tecnologia</label>
+            <br>
+            <input type="text" id="tecnologia" autocomplete="off" maxlength="50" formControlName="descripcion">
+        </div>
+        <div class="element">
+            <label for="Lvl">Nivel</label>
+            <br>
+            <select name="Lvl" id="Lvl" formControlName="nivel">
+                <option>principiante</option>
+                <option>intermedio</option>
+                <option>avanzado</option>
+                <option>experto</option>
+            </select>
+            <button type="button" class="btn btn-success btn-sm" (click)="preparar()">Guardar</button>
+        </div>
+        
+</form>
